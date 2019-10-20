@@ -1,14 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+
+declare let PluginAutoid9U;
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor() {
+    
   }
+
+  singleTag() {
+    alert("Iniciando os testes...");
+    PluginAutoid9U.singleTag((data) => {
+      console.log(data);
+    },(err) => {
+      console.log(err);
+    });
+  }
+
+
+
 
 }
