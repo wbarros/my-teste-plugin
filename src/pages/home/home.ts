@@ -13,14 +13,33 @@ export class HomePage {
     
   }
 
+  open() {
+    console.log("Ligando UHF...");
+    PluginAutoid9U.open((data) => {
+      console.log(data);
+    },(err) => {
+      console.log(err);
+    });
+  }
+
+  close() {
+    console.log("Desligando UHF...");
+    PluginAutoid9U.close((data) => {
+      console.log(data);
+    },(err) => {
+      console.log(err);
+    });
+  }
+
   singleTag() {
-    alert("Iniciando os testes...");
     PluginAutoid9U.singleTag((data) => {
       console.log(data);
     },(err) => {
       console.log(err);
     });
   }
+
+
 
 
 
